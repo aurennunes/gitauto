@@ -33,7 +33,7 @@ description = str(input('Description: '))
 
 
 print('\n' + Strapy.INFO + 'Commit in repository\n' + Strapy.END)
-os.system(f'git commit -m "<{_list[_type]}>[{scope}]: {description}"')
+os.system(f'git commit -m "<{_list[_type]["name"]}>[{scope}]: {description}"')
 print(Strapy.GOOD + 'Success in commit' + Strapy.END + '\n\n')
 
 print(Strapy.INFO + 'Pushing in repository\n' + Strapy.END)
