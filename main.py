@@ -32,8 +32,12 @@ Input the type number: '''))
 scope = str(input('Scope: '))
 description = str(input('Description: '))
 
+scope = (f'({scope})' if len(scope) > 0 else '')
+
 print('\n' + Strapy.INFO + 'Commit in repository\n' + Strapy.END)
-os.system(f'git commit -m "{_list[_type]["name"]} ({scope}): {description}"')
+
+os.system(f'git commit -m "{_list[_type]["name"]} {scope}: {description}"')
+
 print(Strapy.GOOD + 'Success in commit' + Strapy.END + '\n\n')
 
 print(Strapy.INFO + 'Pushing in repository\n' + Strapy.END)
